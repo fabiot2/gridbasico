@@ -19,11 +19,19 @@ body {
 .contenedor {
     margin: 0 auto;
     padding: 10rem;
+    min-width: 40rem;
     background-color: palegreen;
     display: grid;
-    grid-template-columns: 15rem 15rem 15rem;
-    grid-template-rows: 15rem 15rem 15rem;
-    place-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+
+.contenedor-2 {
+    margin: 6rem auto;
+    padding: 10rem;
+    min-width: 40rem;
+    background-color: palegreen;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
 }
 
 .item {
@@ -40,14 +48,14 @@ body {
 .item-2 {
     background-color: peru;
     border-color:  rgb(85, 50, 14);
-    grid-column: 2/4;
+
 }
 
 
 .item-3 {
     background-color: paleturquoise;
     border-color:  rgb(73, 148, 148);
-    grid-column: 1/3;
+
 }
 
 .item-4 {
@@ -55,17 +63,3 @@ body {
     border-color: rgb(129, 56, 129);
 }
 
-.item-5 {
-    background-color:plum;
-    border-color: rgb(129, 56, 129);
-}
-
-.item-6 {
-    background-color: peru;
-    border-color:  rgb(85, 50, 14);
-}
-
-.item-7 {
-    background-color: paleturquoise;
-    border-color:  rgb(73, 148, 148);
-}
