@@ -15,3 +15,24 @@ html {
 body {
     font-size: 1.6rem;
 }
+
+.contenedor {
+    margin: 0 auto;
+    border: 0.5rem solid palevioletred;
+    background-color: palegreen;
+    display: grid;
+    grid-template-columns: 15rem 15rem;
+    grid-auto-rows: 15rem;
+    height: 60rem;
+    place-content: center;
+    gap: 2rem  ;
+    place-items: end;
+}
+
+.item {
+    border: 0.5rem solid red;
+    font-size: 4rem;
+    display: grid;
+    place-items: end;
+    background-color: palevioletred;
+}
