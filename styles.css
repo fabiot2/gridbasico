@@ -31,9 +31,11 @@ h2, h3 {
 }
 
 .hero {
+    padding: 0 4rem;
     display: grid; 
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: minmax(30rem, 2fr) 3fr;
     grid-auto-rows:55rem;
+    border-bottom: 1px solid #ddd;
 }
 
 .hero__info {
@@ -82,7 +84,7 @@ h2, h3 {
 .dishes {
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(4, minmax(15rem, 20rem));
+    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 20rem));
     grid-auto-rows: 1fr;
     gap: 2rem;
 }
@@ -99,9 +101,10 @@ h2, h3 {
 
 .home__menu .menu__grid {
     display: grid;
-    grid-template-columns: repeat(5, minmax(15rem, 20rem));
+    grid-template-columns: repeat(auto-fit, 15rem);
     gap: 2.5rem;
     justify-content: center;
+    margin-bottom: 6rem;
 }
 
 .menu__grid-item {
@@ -115,3 +118,18 @@ h2, h3 {
     height: 100%;
     object-fit: contain;
 }
+
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 0 2rem;
+        grid-template-columns: minmax(30rem, 50rem);
+        justify-content: center;
+    }
+    .hero__img {
+        display: none;
+    }
+
+    .dishes {
+        grid-template-columns: repeat(auto-fit, minmax(7.5rem, 10rem));
+    }
+}_
